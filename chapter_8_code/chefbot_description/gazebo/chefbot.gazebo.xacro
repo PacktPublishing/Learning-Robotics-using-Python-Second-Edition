@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+
+<robot name="chefbot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+	<material name="blue">
+	    <color rgba="0 0 0.8 1"/>
+	</material>
+
+	<material name="white">
+	    <color rgba="1 1 1 1"/>
+	</material>
+
+
+	<material name="yellow">
+	    <color rgba="1 0.8 0.3 0.7"/>
+	</material>
+
+
+	<material name="gray">
+	    <color rgba="0.7 0.7 0.7 1.0"/>
+	</material>
+
+	<material name="darkgray">
+	   <color rgba="0.3 0.3 0.3 1.0"/>
+	</material>
+
+
+
+
+	  <gazebo reference="chefbot_wheel_left_link">
+	    <mu1>1.0</mu1>
+	    <mu2>1.0</mu2>
+	    <kp>1000000.0</kp>
+	    <kd>100.0</kd>
+	    <minDepth>0.001</minDepth>
+	    <maxVel>1.0</maxVel>
+
+
+
+
+
+	  </gazebo>
+	
+	  <gazebo reference="chefbot_wheel_right_link">
+	    <mu1>1.0</mu1>
+	    <mu2>1.0</mu2>
+	    <kp>1000000.0</kp>
+	    <kd>100.0</kd>
+	    <minDepth>0.001</minDepth>
+	    <maxVel>1.0</maxVel>
+
+	  </gazebo>
+	  
+	  <gazebo reference="chefbot_caster_front_link">
+	    <mu1>0.0</mu1>
+	    <mu2>0.0</mu2>
+	    <kp>1000000.0</kp>
+	    <kd>100.0</kd>
+	    <minDepth>0.001</minDepth>
+	    <maxVel>1.0</maxVel>
+
+	  </gazebo>
+	  
+	  <gazebo reference="chefbot_caster_back_link">
+	    <mu1>0.0</mu1>
+	    <mu2>0.0</mu2>
+	    <kp>1000000.0</kp>
+	    <kd>100.0</kd>
+	    <minDepth>0.001</minDepth>
+	    <maxVel>1.0</maxVel>
+
+	  </gazebo>
+	  
+	  <gazebo reference="base_link">
+	    <mu1>0.3</mu1>
+	    <mu2>0.3</mu2>
+	    <sensor type="contact" name="bumpers">
+	      <always_on>1</always_on>
+	      <update_rate>50.0</update_rate>
+	      <visualize>true</visualize>
+	      <contact>
+	        <collision>base_footprint_collision_base_link</collision>
+	      </contact>
+	    </sensor>
+	  </gazebo>
+	
+
+
+
+	<gazebo reference="chefbot_wheel_left_link">
+	  <material>Gazebo/Black</material>
+	</gazebo>
+
+
+
+	<gazebo reference="chefbot_wheel_right_link">
+	  <material>Gazebo/Black</material>
+	</gazebo>
+
+
+	<gazebo reference="base_link">
+	  <material>Gazebo/White</material>
+	</gazebo>
+
+
+
+	  
+	  <gazebo reference="base_link">
+	    <mu1>0.3</mu1>
+	    <mu2>0.3</mu2>
+	    <sensor type="contact" name="bumpers">
+	      <always_on>1</always_on>
+	      <update_rate>50.0</update_rate>
+	      <visualize>true</visualize>
+	      <contact>
+	        <collision>base_footprint_collision_base_link</collision>
+	      </contact>
+	    </sensor>
+	  </gazebo>
+	
+	  <gazebo reference="cliff_sensor_left_link">
+	    <sensor type="ray" name="cliff_sensor_left">
+	      <always_on>true</always_on>
+	      <update_rate>50</update_rate>
+	      <visualize>true</visualize>
+	      <ray>
+	        <scan>
+	          <horizontal>
+	            <samples>50</samples>
+	            <resolution>1.0</resolution>
+	            <min_angle>-0.0436</min_angle>  <!-- -2.5 degree -->
+	            <max_angle>0.0436</max_angle> <!-- 2.5 degree -->
+	          </horizontal>
+
+	        </scan>
+	        <range>
+	          <min>0.01</min>
+	          <max>0.15</max>
+	          <resolution>1.0</resolution>
+	        </range>
+	      </ray>
+	    </sensor>
+	  </gazebo>
+	
+	  <gazebo reference="cliff_sensor_right_link">
+	    <sensor type="ray" name="cliff_sensor_right">
+	      <always_on>true</always_on>
+	      <update_rate>50</update_rate>
+	      <visualize>true</visualize>
+	      <ray>
+	        <scan>
+	          <horizontal>
+	            <samples>50</samples>
+	            <resolution>1.0</resolution>
+	            <min_angle>-0.0436</min_angle>  <!-- -2.5 degree -->
+	            <max_angle>0.0436</max_angle> <!-- 2.5 degree -->
+	          </horizontal>
+
+	        </scan>
+	        <range>
+	          <min>0.01</min>
+	          <max>0.15</max>
+	          <resolution>1.0</resolution>
+	        </range>
+	      </ray>
+	    </sensor>
+	  </gazebo>
+	
+	  <gazebo reference="cliff_sensor_front_link">
+	    <sensor type="ray" name="cliff_sensor_front">
+	      <always_on>true</always_on>
+	      <update_rate>50</update_rate>
+	      <visualize>true</visualize>
+	      <ray>
+	        <scan>
+	          <horizontal>
+	            <samples>50</samples>
+	            <resolution>1.0</resolution>
+	            <min_angle>-0.0436</min_angle>  <!-- -2.5 degree -->
+	            <max_angle>0.0436</max_angle> <!-- 2.5 degree -->
+	          </horizontal>
+
+	        </scan>
+	        <range>
+	          <min>0.01</min>
+	          <max>0.15</max>
+	          <resolution>1.0</resolution>
+	        </range>
+	      </ray>
+	    </sensor>
+	  </gazebo>
+
+
+	
+	  <gazebo reference="gyro_link">
+	   <sensor type="imu" name="imu">
+        <always_on>true</always_on>
+        <update_rate>50</update_rate>
+        <visualize>false</visualize>
+        <imu>
+          <noise>
+            <type>gaussian</type>
+	          <rate>
+	            <mean>0.0</mean>
+	            <stddev>${0.0014*0.0014}</stddev> <!-- 0.25 x 0.25 (deg/s) -->
+	            <bias_mean>0.0</bias_mean>
+	            <bias_stddev>0.0</bias_stddev>
+	          </rate>
+		        <accel> <!-- not used in the plugin and real robot, hence using tutorial values -->
+			        <mean>0.0</mean>
+			        <stddev>1.7e-2</stddev>
+			        <bias_mean>0.1</bias_mean>
+			        <bias_stddev>0.001</bias_stddev>
+		        </accel>
+          </noise>
+	      </imu>
+      		</sensor>
+	  </gazebo>
+	
+	  <gazebo>
+	    <plugin name="kobuki_controller" filename="libgazebo_ros_kobuki.so">
+	      <publish_tf>1</publish_tf>
+	      <left_wheel_joint_name>wheel_left_joint</left_wheel_joint_name>
+	      <right_wheel_joint_name>wheel_right_joint</right_wheel_joint_name>
+	      <wheel_separation>.30</wheel_separation>
+	      <wheel_diameter>0.09</wheel_diameter>
+	      <torque>18.0</torque>
+	      <velocity_command_timeout>0.6</velocity_command_timeout>
+	      <cliff_detection_threshold>0.04</cliff_detection_threshold>
+	      <cliff_sensor_left_name>cliff_sensor_left</cliff_sensor_left_name>
+	      <cliff_sensor_center_name>cliff_sensor_front</cliff_sensor_center_name>
+	      <cliff_sensor_right_name>cliff_sensor_right</cliff_sensor_right_name>
+	      <cliff_detection_threshold>0.04</cliff_detection_threshold>
+	      <bumper_name>bumpers</bumper_name>
+
+        	<imu_name>imu</imu_name>
+	    </plugin>
+	  </gazebo>
+
+    <gazebo reference="camera_link">  
+      <sensor type="depth" name="camera">
+        <always_on>true</always_on>
+        <update_rate>20.0</update_rate>
+        <camera>
+          <horizontal_fov>${60.0*M_PI/180.0}</horizontal_fov>
+          <image>
+            <format>B8G8R8</format>
+            <width>640</width>
+            <height>480</height>
+          </image>
+          <clip>
+            <near>0.05</near>
+            <far>8.0</far>
+          </clip>
+        </camera>
+        <plugin name="kinect_camera_controller" filename="libgazebo_ros_openni_kinect.so">
+          <cameraName>camera</cameraName>
+          <alwaysOn>true</alwaysOn>
+          <updateRate>10</updateRate>
+          <imageTopicName>rgb/image_raw</imageTopicName>
+          <depthImageTopicName>depth/image_raw</depthImageTopicName>
+          <pointCloudTopicName>depth/points</pointCloudTopicName>
+          <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+          <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+          <frameName>camera_depth_optical_frame</frameName>
+          <baseline>0.1</baseline>
+          <distortion_k1>0.0</distortion_k1>
+          <distortion_k2>0.0</distortion_k2>
+          <distortion_k3>0.0</distortion_k3>
+          <distortion_t1>0.0</distortion_t1>
+          <distortion_t2>0.0</distortion_t2>
+          <pointCloudCutoff>0.4</pointCloudCutoff>
+        </plugin>
+      </sensor>
+    </gazebo>
+
+
+
+
+</robot>

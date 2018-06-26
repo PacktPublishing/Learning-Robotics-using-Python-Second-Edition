@@ -1,0 +1,12 @@
+<launch>
+
+
+  <include file="$(find chefbot_description)/launch/upload_model.launch" />
+
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" args="_use_gui:=True" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find chefbot_description)/rviz/robot.rviz" />
+
+</launch>

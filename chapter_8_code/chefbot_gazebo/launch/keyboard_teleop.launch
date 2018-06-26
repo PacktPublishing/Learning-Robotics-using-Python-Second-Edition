@@ -1,0 +1,12 @@
+<launch>
+
+
+  <node pkg="chefbot_gazebo" type="chefbot_teleop_key" name="chefbot_teleop_keyboard"  output="screen">
+    <param name="scale_linear" value="0.5" type="double"/>
+    <param name="scale_angular" value="1.5" type="double"/>
+
+   <!--  <remap from="/mobile_base/commands/velocity" to="chefbot_teleop_keyboard/cmd_vel"/> -->
+    <remap from="chefbot_teleop_keyboard/cmd_vel" to="/mobile_base/commands/velocity"/>
+
+  </node>
+</launch>
