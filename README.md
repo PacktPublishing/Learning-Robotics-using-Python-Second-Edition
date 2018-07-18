@@ -34,6 +34,7 @@ bpy.context.object.rotation_euler[1] = 1.5708
 ```
 
 **Following is what you need for this book:**
+
 This book is for those who are conducting research in mobile robotics and autonomous navigation. As well as the robotics research domain, this book is also for the robot hobbyist community. You’re expected to have a basic understanding of Linux commands and Python.
 
 With the following software and hardware list you can run all code files present in the book (Chapter 1-15).
@@ -59,7 +60,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 * Mastering ROS for Robotics Programming [[Packt]](https://www.packtpub.com/hardware-and-creative/mastering-ros-robotics-programming?utm_source=github&utm_medium=repository&utm_campaign=9781783551798) [[Amazon]](https://www.amazon.com/dp/1783551798)
 
-## Get to Know the Author(s)
+## Get to Know the Author
 **Lentin Joseph** is an author and robotics entrepreneur from India. He runs a robotics
 software company called Qbotics Labs in India. He has 7 years of experience in the robotics
 domain primarily in ROS, OpenCV, and PCL.
