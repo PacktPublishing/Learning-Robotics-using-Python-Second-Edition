@@ -72,7 +72,7 @@ Robotics Institute, CMU, USA.
 
 
 
-## Other books by the authors
+## Other books by the author
 * [Learning Robotics Using Python](https://www.packtpub.com/application-development/learning-robotics-using-python?utm_source=github&utm_medium=repository&utm_campaign=9781783287536)
 * [Mastering ROS for Robotics Programming - Second Edition](https://www.packtpub.com/hardware-and-creative/mastering-ros-robotics-programming-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781788478953)
 
