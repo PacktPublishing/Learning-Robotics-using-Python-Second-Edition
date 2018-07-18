@@ -1,4 +1,4 @@
-# Learning-Robotics-using-Python-Second-Edition
+Learning Robotics using Python - Second Edition
 
 <a href="https://www.packtpub.com/hardware-and-creative/learning-robotics-using-python-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781788623315"><img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B09357.png" alt="Learning Robotics using Python - Second Edition" height="256px" align="right"></a>
 
